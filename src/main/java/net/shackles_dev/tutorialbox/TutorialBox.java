@@ -2,6 +2,7 @@ package net.shackles_dev.tutorialbox;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.shackles_dev.tutorialbox.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,8 @@ public class TutorialBox implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModdedItems();
+
 
 	}
 }

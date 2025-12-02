@@ -1,0 +1,13 @@
+Lemon
+
+lemon - can be eaten to get sour status effect and is replaced with a chopped lemon upon getting eaten, can be placed in a crafting grid to get 2 yellow dye or placed in a crafting grid with a tool to get 2 chopped lemons or placed in a crafting grid with a bucket to get a bucket of lemon juice - max stack size: 8
+
+sour status effect - ???
+
+chopped lemon - can be eaten to get the sour status effect, can be planted as a sapling to grow a lemon tree, can be used as a weapon to apply the sour blindness status effect for 5 seconds on crit or 1 second if target is wearing a helmet, can be placed in a crafting grid to get 1 yellow dye or can be placed in a crafting grid with a bottle to get a bottle of lemon juice - max stack size: 16, durability: 3, attack damage: 1 (ignores armor except helmets)
+
+lemon juice - ???
+
+lemon tree - ???
+
+sour blindness status effect - applies blindness 1 and weakness 1 and nausea 1
