@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialbox",
+	"version": "0.1 - 1.21.10",
+	"name": "Tutorial Box",
+	"description": "a collection of tutorial code",
+	"authors": [
+		"Shackles_Dev"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tutorialbox/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.shackles_dev.tutorialbox.TutorialBox"
+		],
+		"fabric-datagen": [
+			"net.shackles_dev.tutorialbox.TutorialBoxDataGenerator"
+		],
+		"client": [
+			"net.shackles_dev.tutorialbox.TutorialBoxClient"
+		]
+	},
+	"mixins": [
+		"tutorialbox.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
