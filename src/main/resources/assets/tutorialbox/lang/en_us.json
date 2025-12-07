@@ -1,0 +1,28 @@
+{
+  "item.tutorialbox.lemon": "Lemon",
+  "item.tutorialbox.chopped_lemon": "Chopped Lemon",
+
+  "item.tutorialbox.magic_wand": "Magic Wand",
+  "item.tutorialbox.magic_wand_mono": "Magic Wand",
+  "item.tutorialbox.jack_daniels": "Jack Daniels",
+
+  "block.tutorialbox.lemon_leaves": "Lemon Leaves",
+  "block.tutorialbox.lemon_planks": "Lemon Planks",
+
+  "block.tutorialbox.magic_block": "Magic Block",
+
+  "block.magic_block.tooltip": "§kI CAN SEE YOU§r. §kYOU SHOULDN'T BE HERE§r.",
+
+  "item.magic_wand.tooltip_shift_is_held": "more info",
+  "item.magic_wand.tooltip_alt_is_held": "stats",
+  "item.magic_wand.tooltip_ctrl_is_held": "Did I §isay §rto press ctrl?",
+  "item.magic_wand.tooltip": "press shit for more info and alt for stats",
+  "item.lemons.tooltip": "way too sour",
+  "item.jack_daniels.tooltip": "RIDING IN MY CART RIGHT AFTER A POTION",
+
+  "itemGroup.tutorialbox.modded_food_and_drinks": "Food & Drinks",
+  "itemGroup.tutorialbox.modded_natural_blocks": "Natural Blocks",
+  "itemGroup.tutorialbox.modded_building_blocks": "Building Blocks",
+  "itemGroup.tutorialbox.modded_tools_and_utilities": "Tools & Utilities",
+  "itemGroup.tutorialbox.modded_combat": "Combat"
+}
