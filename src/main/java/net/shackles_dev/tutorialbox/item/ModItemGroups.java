@@ -25,6 +25,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.LEMON_LEAVES)).displayName(
                     Text.translatable("itemGroup.tutorialbox.modded_natural_blocks")).entries(
                             (displayContext, entries) -> {
+                                //entries.add(ModBlocks.LEMON_LOG);
                                 entries.add(ModBlocks.LEMON_LEAVES);
                             }).build());
     public static final ItemGroup MODDED_BUILDING_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -33,6 +34,14 @@ public class ModItemGroups {
                     Text.translatable("itemGroup.tutorialbox.modded_building_blocks")).entries(
                             (displayContext, entries) -> {
                                 entries.add(ModBlocks.LEMON_PLANKS);
+                                entries.add(ModBlocks.LEMON_STAIRS);
+                                entries.add(ModBlocks.LEMON_SLAB);
+                                entries.add(ModBlocks.LEMON_FENCE);
+                                entries.add(ModBlocks.LEMON_FENCE_GATE);
+                                entries.add(ModBlocks.LEMON_BUTTON);
+                                entries.add(ModBlocks.LEMON_PRESSURE_PLATE);
+                                entries.add(ModBlocks.LEMON_DOOR);
+                                entries.add(ModBlocks.LEMON_TRAPDOOR);
                                 entries.add(ModBlocks.MAGIC_BLOCK);
                             }).build());
     public static final ItemGroup MODDED_TOOLS_AND_UTILITIES_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -53,6 +62,6 @@ public class ModItemGroups {
 
 
     public static void registerItemGroups() {
-        TutorialBox.LOGGER.info("making room for creations in " + TutorialBox.MOD_ID);
+        TutorialBox.LOGGER.info("making room for creations in " + TutorialBox.MOD_ID + '!');
     }
 }

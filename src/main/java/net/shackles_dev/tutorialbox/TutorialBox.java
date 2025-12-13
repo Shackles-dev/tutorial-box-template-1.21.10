@@ -3,6 +3,7 @@ package net.shackles_dev.tutorialbox;
 import net.fabricmc.api.ModInitializer;
 
 import net.shackles_dev.tutorialbox.block.ModBlocks;
+import net.shackles_dev.tutorialbox.component.ModDataComponentTypes;
 import net.shackles_dev.tutorialbox.item.ModItemGroups;
 import net.shackles_dev.tutorialbox.item.ModItems;
 import org.slf4j.Logger;
@@ -18,5 +19,6 @@ public class TutorialBox implements ModInitializer {
 
 		ModItems.registerModdedItems();
 		ModBlocks.registerModBlocks();
+		ModDataComponentTypes.registerComponentDataTypes();
 	}
 }

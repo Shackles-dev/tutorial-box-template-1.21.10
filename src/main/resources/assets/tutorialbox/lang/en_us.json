@@ -9,13 +9,26 @@
   "block.tutorialbox.lemon_leaves": "Lemon Leaves",
   "block.tutorialbox.lemon_planks": "Lemon Planks",
 
+  "lemon_stairs": "Lemon Stairs",
+  "lemon_slab": "Lemon Slab",
+  "lemon_button": "Lemon Button",
+  "lemon_pressure_plate": "Lemon Pressure Plate",
+  "lemon_fence": "Lemon Fence",
+  "lemon_fence_gate": "Lemon Fence Gate",
+  "lemon_door": "Lemon Door",
+  "lemon_trapdoor":"Lemon Trapdoor",
+
   "block.tutorialbox.magic_block": "Magic Block",
 
   "block.magic_block.tooltip": "§kI CAN SEE YOU§r. §kYOU SHOULDN'T BE HERE§r.",
 
   "item.magic_wand.tooltip_shift_is_held": "more info",
+
   "item.magic_wand.tooltip_alt_is_held": "stats",
+  "item.magic_wand.last_block_transformed": "",
+
   "item.magic_wand.tooltip_ctrl_is_held": "Did I §isay §rto press ctrl?",
+
   "item.magic_wand.tooltip": "press shit for more info and alt for stats",
   "item.lemons.tooltip": "way too sour",
   "item.jack_daniels.tooltip": "RIDING IN MY CART RIGHT AFTER A POTION",

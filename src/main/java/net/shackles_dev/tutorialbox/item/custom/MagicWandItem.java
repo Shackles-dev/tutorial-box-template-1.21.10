@@ -14,8 +14,8 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
+import net.shackles_dev.tutorialbox.component.ModDataComponentTypes;
 
 import java.util.List;
 import java.util.Map;
@@ -51,23 +51,20 @@ public class MagicWandItem extends Item {
         World world = context.getWorld();
         Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
 
-        if(LIFE_MAP.containsKey(clickedBlock)) {
+        if(LIFE_MAP.containsKey(clickedBlock) || DEATH_MAP.containsKey(clickedBlock)) {
             if(!world.isClient) {
-                world.setBlockState(context.getBlockPos(), LIFE_MAP.get(clickedBlock).getDefaultState());
+                world.setBlockState(context.getBlockPos(),
+                        LIFE_MAP.containsKey(clickedBlock) ? LIFE_MAP.get(clickedBlock).getDefaultState() :
+                                DEATH_MAP.get(clickedBlock).getDefaultState());
 
                 context.getStack().damage(2, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
-                world.playSound(null, context.getBlockPos(), SoundEvents.ENTITY_SILVERFISH_HURT, SoundCategory.BLOCKS);
-            }
-        } else if(DEATH_MAP.containsKey(clickedBlock)) {
-            if(!world.isClient) {
-                world.setBlockState(context.getBlockPos(), DEATH_MAP.get(clickedBlock).getDefaultState());
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
 
-                context.getStack().damage(-1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
-                        item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
-
-                world.playSound(null, context.getBlockPos(), SoundEvents.ENTITY_WITHER_DEATH, SoundCategory.BLOCKS);
+                world.playSound(null, context.getBlockPos(),
+                        LIFE_MAP.containsKey(clickedBlock) ? SoundEvents.ENTITY_SILVERFISH_HURT : SoundEvents.ENTITY_WITHER_DEATH,
+                        SoundCategory.BLOCKS);
             }
         }
 
@@ -78,12 +75,19 @@ public class MagicWandItem extends Item {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         if(Screen.hasShiftDown()) {
             tooltip.add(Text.translatable("item.magic_wand.tooltip_shift_is_held"));
+
         } else if(Screen.hasAltDown()) {
             tooltip.add(Text.translatable("item.magic_wand.tooltip_alt_is_held"));
+            if(stack.get(ModDataComponentTypes.COORDINATES)!=null) {
+                tooltip.add(Text.literal("Latest block transformed: " +     stack.get(ModDataComponentTypes.COORDINATES)));
+            }
+
         } else if(Screen.hasControlDown()) {
             tooltip.add(Text.translatable("item.magic_wand.tooltip_ctrl_is_held"));
+
         } else {
             tooltip.add(Text.translatable("item.magic_wand.tooltip"));
+
         }
 
         super.appendTooltip(stack, context, tooltip, type);
