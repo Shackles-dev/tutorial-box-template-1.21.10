@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "tutorialbox:block/jack_o_melon",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "tutorialbox:block/jack_o_melon"
+    },
+    "facing=south": {
+      "model": "tutorialbox:block/jack_o_melon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "tutorialbox:block/jack_o_melon",
+      "y": 270
+    }
+  }
+}

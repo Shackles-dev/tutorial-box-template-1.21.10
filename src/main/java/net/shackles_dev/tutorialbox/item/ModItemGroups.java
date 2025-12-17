@@ -27,6 +27,8 @@ public class ModItemGroups {
                             (displayContext, entries) -> {
                                 //entries.add(ModBlocks.LEMON_LOG);
                                 entries.add(ModBlocks.LEMON_LEAVES);
+                                entries.add(ModBlocks.CARVED_MELON);
+                                entries.add(ModBlocks.JACK_O_MELON);
                             }).build());
     public static final ItemGroup MODDED_BUILDING_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TutorialBox.MOD_ID, "modded_building_blocks"),
@@ -51,13 +53,29 @@ public class ModItemGroups {
                             (displayContext, entries) -> {
                                 entries.add(ModItems.MAGIC_WAND);
                                 entries.add(ModItems.JACK_DANIELS);
+                                entries.add(ModItems.AMETHYST_PICKAXE);
+                                entries.add(ModItems.AMETHYST_SHOVEL);
+                                entries.add(ModItems.AMETHYST_AXE);
+                                entries.add(ModItems.AMETHYST_HOE);
+                                entries.add(ModItems.AMETHYST_HAMMER);
                             }).build());
     public static final ItemGroup MODDED_COMBAT_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TutorialBox.MOD_ID, "modded_combat"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.MAGIC_WAND)).displayName(
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.AMETHYST_SWORD)).displayName(
                     Text.translatable("itemGroup.tutorialbox.modded_combat")).entries(
                             (displayContext, entries) -> {
                                 entries.add(ModItems.MAGIC_WAND);
+
+                                entries.add(ModItems.AMETHYST_SWORD);
+                                entries.add(ModItems.AMETHYST_AXE);
+                                entries.add(ModItems.AMETHYST_HAMMER);
+
+                                entries.add(ModItems.AMETHYST_HELMET);
+                                entries.add(ModItems.AMETHYST_CHESTPLATE);
+                                entries.add(ModItems.AMETHYST_LEGGINGS);
+                                entries.add(ModItems.AMETHYST_BOOTS);
+
+                                entries.add(ModItems.AMETHYST_HORSE_ARMOR);
                             }).build());
 
 

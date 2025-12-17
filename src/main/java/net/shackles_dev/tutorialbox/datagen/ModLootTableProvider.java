@@ -3,6 +3,7 @@ package net.shackles_dev.tutorialbox.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.shackles_dev.tutorialbox.block.ModBlocks;
 import net.shackles_dev.tutorialbox.item.ModItems;
@@ -28,5 +29,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LEMON_LEAVES, leavesDrops(ModBlocks.LEMON_LEAVES, Block.getBlockFromItem(ModItems.CHOPPED_LEMON), 100));
         //addDrop(ModBlocks.LEMON_SAPLING);
         addDrop(ModBlocks.MAGIC_BLOCK);
+        addDrop(ModBlocks.CARVED_MELON);
+        addDrop(ModBlocks.JACK_O_MELON);
+        addDrop(Blocks.BUDDING_AMETHYST);
     }
 }

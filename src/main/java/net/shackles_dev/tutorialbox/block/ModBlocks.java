@@ -14,7 +14,7 @@ public class ModBlocks {
     //         new Block(AbstractBlock.Settings.create().burnable())
     // );
     public static final Block LEMON_PLANKS = registerBlock("lemon_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.YELLOW))
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.YELLOW).liquid())
     );
     public static final Block LEMON_LEAVES = registerBlock("lemon_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES))
@@ -23,6 +23,12 @@ public class ModBlocks {
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create().nonOpaque().luminance(state -> state.get(MagicBlock.CLICKED) ? 15 : 0))
     );
+
+    public static final Block CARVED_MELON = registerBlock("carved_melon",
+            new WearableCarvedPumpkinBlock(AbstractBlock.Settings.copy(Blocks.CARVED_PUMPKIN).mapColor(MapColor.GREEN)));
+
+    public static final Block JACK_O_MELON = registerBlock("jack_o_melon",
+            new CarvedPumpkinBlock(AbstractBlock.Settings.copy(Blocks.JACK_O_LANTERN).mapColor(MapColor.GREEN)));
 
     public static final Block LEMON_STAIRS = registerBlock("lemon_stairs",
             new StairsBlock(ModBlocks.LEMON_PLANKS.getDefaultState(),

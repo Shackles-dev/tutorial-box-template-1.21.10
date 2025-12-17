@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "tutorialbox:block/magic_block_mono"
+    },
+    "clicked=true": {
+      "model": "tutorialbox:block/magic_block"
+    }
+  }
+}

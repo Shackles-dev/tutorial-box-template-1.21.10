@@ -1,0 +1,6 @@
+// 1.21.1	2025-12-17T21:18:47.5881496	Tutorial Box/Tags for minecraft:block
+046414e7e5b178cf29552993924dcfd070201a6d data\minecraft\tags\block\wooden_fences.json
+14b2567b4daf5a9221c5086347102eebb82b44a7 data\minecraft\tags\block\fence_gates.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\needs_iron_tool.json
+15d5cb5b1426c74b1b6d562f755a470ed1998afd data\tutorialbox\tags\block\needs_amethyst_tool.json
+5c0bbbec41c202fa9d104ea2ad6848facd0e5fdb data\minecraft\tags\block\mineable\axe.json

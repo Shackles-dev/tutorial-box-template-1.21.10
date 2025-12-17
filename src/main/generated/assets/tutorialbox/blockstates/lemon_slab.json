@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tutorialbox:block/lemon_slab"
+    },
+    "type=double": {
+      "model": "tutorialbox:block/lemon_planks"
+    },
+    "type=top": {
+      "model": "tutorialbox:block/lemon_slab_top"
+    }
+  }
+}

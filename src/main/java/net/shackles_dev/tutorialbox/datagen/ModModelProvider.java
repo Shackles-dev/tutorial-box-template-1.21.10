@@ -2,7 +2,9 @@ package net.shackles_dev.tutorialbox.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.shackles_dev.tutorialbox.block.ModBlocks;
 import net.shackles_dev.tutorialbox.block.custom.MagicBlock;
@@ -22,8 +24,12 @@ public class ModModelProvider extends FabricModelProvider {
         LemonWoodPool.fence(ModBlocks.LEMON_FENCE);
         LemonWoodPool.fenceGate(ModBlocks.LEMON_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.LEMON_DOOR);
-        blockStateModelGenerator.registerTrapdoor(ModBlocks.LEMON_TRAPDOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.LEMON_TRAPDOOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEMON_LEAVES);
+
+        TextureMap textureMap = TextureMap.sideEnd(Blocks.MELON);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.CARVED_MELON, textureMap);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.JACK_O_MELON, textureMap);
 
         Identifier magicBlockColoredIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.MAGIC_BLOCK, blockStateModelGenerator.modelCollector);
         Identifier magicBlockMonoIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.MAGIC_BLOCK, "_mono", Models.CUBE_ALL, TextureMap::all);
@@ -38,7 +44,22 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHOPPED_LEMON, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.JACK_DANIELS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MAGIC_WAND, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MAGIC_WAND_MONO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAGIC_WAND, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MAGIC_WAND_MONO, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.AMETHYST_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AMETHYST_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AMETHYST_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AMETHYST_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AMETHYST_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.AMETHYST_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_BOOTS));
+
+        itemModelGenerator.register(ModItems.AMETHYST_HORSE_ARMOR, Models.GENERATED);
     }
 }

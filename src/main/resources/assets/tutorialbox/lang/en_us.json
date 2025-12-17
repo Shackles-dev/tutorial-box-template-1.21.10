@@ -6,17 +6,32 @@
   "item.tutorialbox.magic_wand_mono": "Magic Wand",
   "item.tutorialbox.jack_daniels": "Jack Daniels",
 
+  "item.tutorialbox.amethyst_sword": "Amethyst Sword",
+  "item.tutorialbox.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.tutorialbox.amethyst_shovel": "Amethyst Shovel",
+  "item.tutorialbox.amethyst_axe": "Amethyst Axe",
+  "item.tutorialbox.amethyst_hoe": "Amethyst Hoe",
+  "item.tutorialbox.amethyst_hammer": "Amethyst Hammer",
+
+  "item.tutorialbox.amethyst_helmet": "Amethyst Helmet",
+  "item.tutorialbox.amethyst_chestplate": "Amethyst Chestplate",
+  "item.tutorialbox.amethyst_leggings": "Amethyst Leggings",
+  "item.tutorialbox.amethyst_boots": "Amethyst Boots",
+
   "block.tutorialbox.lemon_leaves": "Lemon Leaves",
   "block.tutorialbox.lemon_planks": "Lemon Planks",
 
-  "lemon_stairs": "Lemon Stairs",
-  "lemon_slab": "Lemon Slab",
-  "lemon_button": "Lemon Button",
-  "lemon_pressure_plate": "Lemon Pressure Plate",
-  "lemon_fence": "Lemon Fence",
-  "lemon_fence_gate": "Lemon Fence Gate",
-  "lemon_door": "Lemon Door",
-  "lemon_trapdoor":"Lemon Trapdoor",
+  "block.tutorialbox.carved_melon": "Carved Melon",
+  "block.tutorialbox.jack_o_melon": "Jack O' Melon",
+
+  "block.tutorialbox.lemon_stairs": "Lemon Stairs",
+  "block.tutorialbox.lemon_slab": "Lemon Slab",
+  "block.tutorialbox.lemon_button": "Lemon Button",
+  "block.tutorialbox.lemon_pressure_plate": "Lemon Pressure Plate",
+  "block.tutorialbox.lemon_fence": "Lemon Fence",
+  "block.tutorialbox.lemon_fence_gate": "Lemon Fence Gate",
+  "block.tutorialbox.lemon_door": "Lemon Door",
+  "block.tutorialbox.lemon_trapdoor":"Lemon Trapdoor",
 
   "block.tutorialbox.magic_block": "Magic Block",
 
@@ -25,7 +40,6 @@
   "item.magic_wand.tooltip_shift_is_held": "more info",
 
   "item.magic_wand.tooltip_alt_is_held": "stats",
-  "item.magic_wand.last_block_transformed": "",
 
   "item.magic_wand.tooltip_ctrl_is_held": "Did I §isay §rto press ctrl?",
 
