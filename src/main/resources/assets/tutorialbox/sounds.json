@@ -1,0 +1,10 @@
+{
+  "dreaming_stars": {
+    "sounds": [
+      {
+        "name": "tutorialbox:dreaming_stars",
+        "stream": true
+      }
+    ]
+  }
+}

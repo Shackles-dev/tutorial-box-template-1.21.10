@@ -12,7 +12,10 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     AMETHYST(ModTags.Blocks.INCORRECT_FOR_AMETHYST_TOOL, 110, 7.0F, 2.0F, 22, () ->
-            Ingredient.ofItems(Items.AMETHYST_SHARD));
+            Ingredient.ofItems(Items.AMETHYST_SHARD)),
+
+    VOID(ModTags.Blocks.INCORRECT_FOR_VOID_TOOL, 1000, 3.0F, 6.0F, 100, () ->
+            Ingredient.ofItems(Items.INK_SAC));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

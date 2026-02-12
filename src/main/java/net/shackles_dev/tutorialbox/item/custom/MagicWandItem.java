@@ -16,6 +16,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 import net.shackles_dev.tutorialbox.component.ModDataComponentTypes;
+import net.shackles_dev.tutorialbox.sound.ModSounds;
 
 import java.util.List;
 import java.util.Map;
@@ -63,7 +64,7 @@ public class MagicWandItem extends Item {
                 context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
 
                 world.playSound(null, context.getBlockPos(),
-                        LIFE_MAP.containsKey(clickedBlock) ? SoundEvents.ENTITY_SILVERFISH_HURT : SoundEvents.ENTITY_WITHER_DEATH,
+                        LIFE_MAP.containsKey(clickedBlock) ? ModSounds.WAND_LIFE_USE : ModSounds.WAND_DEATH_USE,
                         SoundCategory.BLOCKS);
             }
         }

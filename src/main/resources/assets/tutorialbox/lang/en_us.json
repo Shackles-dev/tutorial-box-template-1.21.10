@@ -1,6 +1,7 @@
 {
   "item.tutorialbox.lemon": "Lemon",
   "item.tutorialbox.chopped_lemon": "Chopped Lemon",
+  "item.tutorialbox.uranium": "Uranium",
 
   "item.tutorialbox.magic_wand": "Magic Wand",
   "item.tutorialbox.magic_wand_mono": "Magic Wand",
@@ -12,14 +13,28 @@
   "item.tutorialbox.amethyst_axe": "Amethyst Axe",
   "item.tutorialbox.amethyst_hoe": "Amethyst Hoe",
   "item.tutorialbox.amethyst_hammer": "Amethyst Hammer",
+  "item.tutorialbox.amethyst_bow": "Amethyst Bow",
+
+  "item.tutorialbox.void_sword": "Void Sword",
+  "item.tutorialbox.void_hammer": "Void Hammer",
+
+  "item.tutorialbox.dreaming_stars_music_disc": "Music Disc",
+  "item.tutorialbox.dreaming_stars_music_disc.desc": "Blob.Paradise - Dreaming Stars (CC0)",
 
   "item.tutorialbox.amethyst_helmet": "Amethyst Helmet",
   "item.tutorialbox.amethyst_chestplate": "Amethyst Chestplate",
   "item.tutorialbox.amethyst_leggings": "Amethyst Leggings",
   "item.tutorialbox.amethyst_boots": "Amethyst Boots",
 
+  "item.tutorialbox.eyeball_armor_trim_smithing_template": "Eyeball Smithing Template",
+
   "block.tutorialbox.lemon_leaves": "Lemon Leaves",
   "block.tutorialbox.lemon_planks": "Lemon Planks",
+
+  "block.tutorialbox.uranium_ore": "Uranium Ore",
+  "block.tutorialbox.deepslate_uranium_ore": "Deepslate Uranium Ore",
+  "block.tutorialbox.uranium_glass": "Uranium Glass",
+  "block.tutorialbox.uranium_block": "Uranium Block",
 
   "block.tutorialbox.carved_melon": "Carved Melon",
   "block.tutorialbox.jack_o_melon": "Jack O' Melon",
@@ -37,6 +52,9 @@
 
   "block.magic_block.tooltip": "§kI CAN SEE YOU§r. §kYOU SHOULDN'T BE HERE§r.",
 
+  "painting.tutorialbox.strangest_moon.title": "The Strangest World",
+  "painting.tutorialbox.strangest_moon.author": "Shackles_Dev",
+
   "item.magic_wand.tooltip_shift_is_held": "more info",
 
   "item.magic_wand.tooltip_alt_is_held": "stats",
@@ -45,11 +63,26 @@
 
   "item.magic_wand.tooltip": "press shit for more info and alt for stats",
   "item.lemons.tooltip": "way too sour",
-  "item.jack_daniels.tooltip": "RIDING IN MY CART RIGHT AFTER A POTION",
+  "item.jack_daniels.tooltip": "RIDING IN MY CART RIGHT AFTER A BREW",
+
+  "enchantment.tutorialbox.repugnant": "Repugnant",
 
   "itemGroup.tutorialbox.modded_food_and_drinks": "Food & Drinks",
   "itemGroup.tutorialbox.modded_natural_blocks": "Natural Blocks",
   "itemGroup.tutorialbox.modded_building_blocks": "Building Blocks",
+  "itemGroup.tutorialbox.modded_colored_blocks": "Colored Blocks",
   "itemGroup.tutorialbox.modded_tools_and_utilities": "Tools & Utilities",
-  "itemGroup.tutorialbox.modded_combat": "Combat"
+  "itemGroup.tutorialbox.modded_combat": "Combat",
+  "itemGroup.tutorialbox.ingredients": "Ingredients",
+
+  "effect.tutorialbox.slimey": "Slimey",
+  "effect.tutorialbox.sour": "Sour",
+  "effect.tutorialbox.totem": "Echoed Totem",
+
+  "item.minecraft.potion.effect.totem_potion": "Totem Potion",
+  "item.minecraft.splash_potion.effect.totem_potion": "Totem Splash Potion",
+  "item.minecraft.lingering_potion.effect.totem_potion": "Totem Lingering Potion",
+
+  "trim_materials.tutorialbox.echo_shard": "Echo Shard Material",
+  "trim_pattern.tutorialbox.eyeball": "Eyeball Armor Pattern"
 }

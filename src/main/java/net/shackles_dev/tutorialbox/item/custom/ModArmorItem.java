@@ -1,6 +1,9 @@
 package net.shackles_dev.tutorialbox.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.Items;
+import net.minecraft.registry.tag.FluidTags;
 import net.shackles_dev.tutorialbox.item.ModArmorMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -11,6 +14,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
+import net.shackles_dev.tutorialbox.item.ModItems;
 
 import java.util.List;
 import java.util.Map;
@@ -26,7 +30,8 @@ public class ModArmorItem extends ArmorItem {
                                     new StatusEffectInstance(StatusEffects.SPEED, duraration, 0, false, false),
                                     new StatusEffectInstance(StatusEffects.JUMP_BOOST, duraration, 1, false, false),
                                     new StatusEffectInstance(StatusEffects.SLOW_FALLING, duraration, 1, false, false)
-                            )).build();
+                            )
+                    ).build();
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);
@@ -39,6 +44,8 @@ public class ModArmorItem extends ArmorItem {
                 if(hasFullSuitOfArmorOn(player)) {
                     evaluateArmorEffects(player);
                 }
+
+                updateBoykisserBoots(player);
             }
         }
 
@@ -75,6 +82,13 @@ public class ModArmorItem extends ArmorItem {
 
         return !helmet.isEmpty() && !breastplate.isEmpty()
                 && !leggings.isEmpty() && !boots.isEmpty();
+    }
+
+    private void updateBoykisserBoots(PlayerEntity player) {
+        ItemStack boots = player.getInventory().getArmorStack(0);
+        if (boots.isOf(ModItems.BOYKISSER_BOOTS)) {
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 0, 0, false, false, true));
+        }
     }
 
     private boolean hasCorrectArmorOn(RegistryEntry<ArmorMaterial> material, PlayerEntity player) {

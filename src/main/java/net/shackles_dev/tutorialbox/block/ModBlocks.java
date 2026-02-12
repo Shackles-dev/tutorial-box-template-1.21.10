@@ -8,20 +8,39 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.shackles_dev.tutorialbox.TutorialBox;
 import net.shackles_dev.tutorialbox.block.custom.MagicBlock;
+import net.shackles_dev.tutorialbox.block.custom.UraniumBlock;
+import net.shackles_dev.tutorialbox.block.custom.UraniumGlassBlock;
+import net.shackles_dev.tutorialbox.sound.ModSounds;
+
+import static net.minecraft.block.Blocks.createLogBlock;
 
 public class ModBlocks {
-    //public static final Block LEMON_LOG = registerBlock("lemon_log",
-    //         new Block(AbstractBlock.Settings.create().burnable())
-    // );
-    public static final Block LEMON_PLANKS = registerBlock("lemon_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.YELLOW).liquid())
-    );
+//    public static final Block LEMON_LOG = registerBlock("lemon_log",
+//            createLogBlock(MapColor.PALE_YELLOW, MapColor.YELLOW)
+//    );
     public static final Block LEMON_LEAVES = registerBlock("lemon_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES))
     );
+    public static final Block LEMON_PLANKS = registerBlock("lemon_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.YELLOW))
+    );
+
+    public static final Block URANIUM_ORE = registerBlock("uranium_ore",
+            new UraniumBlock(AbstractBlock.Settings.copy(Blocks.EMERALD_ORE))
+    );
+    public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
+            new UraniumBlock(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_EMERALD_ORE))
+    );
+    public static final Block URANIUM_GLASS = registerBlock("uranium_glass",
+            new UraniumGlassBlock(AbstractBlock.Settings.copy(Blocks.GREEN_STAINED_GLASS))
+    );
+    public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
+            new UraniumBlock(AbstractBlock.Settings.copy(Blocks.EMERALD_BLOCK))
+    );
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
-            new MagicBlock(AbstractBlock.Settings.create().nonOpaque().luminance(state -> state.get(MagicBlock.CLICKED) ? 15 : 0))
+            new MagicBlock(AbstractBlock.Settings.create().nonOpaque().luminance(state -> state.get(
+                    MagicBlock.CLICKED) ? 15 : 0).sounds(ModSounds.MAGIC_BLOCK_SOUNDS))
     );
 
     public static final Block CARVED_MELON = registerBlock("carved_melon",

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 12,
+  "description": {
+    "translate": "item.tutorialbox.dreaming_stars_music_disc.desc"
+  },
+  "length_in_seconds": 125.0,
+  "sound_event": "tutorialbox:dreaming_stars"
+}

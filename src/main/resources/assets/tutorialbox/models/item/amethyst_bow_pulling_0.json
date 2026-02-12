@@ -1,0 +1,6 @@
+{
+    "parent": "tutorialbox:item/amethyst_bow",
+    "textures": {
+        "layer0": "tutorialbox:item/amethyst_bow_pulling_0"
+    }
+}

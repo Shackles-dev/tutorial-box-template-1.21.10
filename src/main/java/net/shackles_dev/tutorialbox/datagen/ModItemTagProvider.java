@@ -40,5 +40,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.AMETHYST_CHESTPLATE)
                 .add(ModItems.AMETHYST_LEGGINGS)
                 .add(ModItems.AMETHYST_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
+                .add(Items.ECHO_SHARD);
+        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.EYEBALL_SMITHING_TEMPLATE);
     }
 }

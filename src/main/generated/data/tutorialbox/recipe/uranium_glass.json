@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "tutorialbox:uranium"
+    },
+    "*": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#*#",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialbox:uranium_glass"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "-": {
+      "item": "minecraft:amethyst_cluster"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " # ",
+    " - ",
+    " | "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialbox:amethyst_sword"
+  }
+}

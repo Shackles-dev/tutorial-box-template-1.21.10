@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "tutorialbox:item/void_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "tutorialbox:activated": 1
+      },
+
+      "model": "tutorialbox:item/void_sword_activated"
+    }
+  ]
+}

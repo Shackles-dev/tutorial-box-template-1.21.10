@@ -26,7 +26,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.LEMON_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.LEMON_TRAPDOOR);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEMON_LEAVES);
+        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEMON_LOG);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.URANIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_URANIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.URANIUM_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.URANIUM_BLOCK);
+ 
         TextureMap textureMap = TextureMap.sideEnd(Blocks.MELON);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.CARVED_MELON, textureMap);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.JACK_O_MELON, textureMap);
@@ -43,8 +49,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LEMON, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHOPPED_LEMON, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.URANIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.URANIUM_WASTE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.JACK_DANIELS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MAGIC_WAND, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MAGIC_WAND_MONO, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.AMETHYST_SWORD, Models.HANDHELD);
@@ -52,14 +60,21 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.AMETHYST_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.AMETHYST_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.AMETHYST_HOE, Models.HANDHELD);
-
         itemModelGenerator.register(ModItems.AMETHYST_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.VOID_HAMMER, Models.HANDHELD);
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.AMETHYST_BOOTS));
 
+        //itemModelGenerator.registerArmor(((ArmorItem) ModItems.BOYKISSER_BOOTS));
+
         itemModelGenerator.register(ModItems.AMETHYST_HORSE_ARMOR, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.EYEBALL_SMITHING_TEMPLATE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.DREAMING_STARS_MUSIC_DISC, Models.GENERATED);
     }
 }

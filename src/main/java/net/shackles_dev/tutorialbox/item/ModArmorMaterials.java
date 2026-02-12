@@ -27,6 +27,16 @@ public class ModArmorMaterials {
             }), 25, SoundEvents.ITEM_ARMOR_EQUIP_IRON, () -> Ingredient.ofItems(Items.AMETHYST_SHARD),
                     List.of(new ArmorMaterial.Layer(Identifier.of(TutorialBox.MOD_ID, "amethyst"))), 0, 0));
 
+    public static final RegistryEntry<ArmorMaterial> BOYKISSER_ARMOR_MATERIAL = registerArmorMaterial("boykisser", () ->
+            new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 2);
+                map.put(ArmorItem.Type.CHESTPLATE, 3);
+                map.put(ArmorItem.Type.HELMET, 1);
+                map.put(ArmorItem.Type.BODY, 3);
+            }), 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, () -> Ingredient.ofItems(Items.WHITE_DYE, Items.PINK_DYE),
+                    List.of(new ArmorMaterial.Layer(Identifier.of(TutorialBox.MOD_ID,"boykisser"), "", false), new ArmorMaterial.Layer(Identifier.of(TutorialBox.MOD_ID,"boykisser"), "_overlay", true)), 0, 0));
+
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
         return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(TutorialBox.MOD_ID, name), material.get());
     }

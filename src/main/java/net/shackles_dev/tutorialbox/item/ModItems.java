@@ -1,35 +1,22 @@
 package net.shackles_dev.tutorialbox.item;
 
 import net.minecraft.item.*;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.shackles_dev.tutorialbox.TutorialBox;
-import net.shackles_dev.tutorialbox.block.ModBlocks;
-import net.shackles_dev.tutorialbox.item.custom.HammerItem;
-import net.shackles_dev.tutorialbox.item.custom.JackDanielsItem;
-import net.shackles_dev.tutorialbox.item.custom.MagicWandItem;
-import net.shackles_dev.tutorialbox.item.custom.ModArmorItem;
-
-import java.util.List;
+import net.shackles_dev.tutorialbox.item.custom.*;
+import net.shackles_dev.tutorialbox.sound.ModSounds;
 
 public class ModItems {
-    public static final Item LEMON = registerItems("lemon", new Item(new Item.Settings().food(ModFoodComponents.LEMON).recipeRemainder(ModItems.CHOPPED_LEMON)) {
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("item.lemons.tooltip"));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
-    });
-    public static final Item CHOPPED_LEMON = registerItems("chopped_lemon", new AliasedBlockItem(ModBlocks.LEMON_LEAVES/*LEMON_SAPLING*/, new Item.Settings().food(ModFoodComponents.CHOPPEDLEMON)) {
-        @Override
-        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("item.lemons.tooltip"));
-            super.appendTooltip(stack, context, tooltip, type);
-        }
-    });
+    public static final Item LEMON = registerItems("lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON).recipeRemainder(
+            ModItems.CHOPPED_LEMON)));
+    public static final Item CHOPPED_LEMON = registerItems("chopped_lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON)));
+
+    public static final Item URANIUM = registerItems("uranium", new Item(new Item.Settings().recipeRemainder(ModItems.URANIUM_WASTE).maxCount(1)));
+    public static final Item URANIUM_WASTE = registerItems("uranium_waste", new Item(new Item.Settings()));
 
     public static final Item MAGIC_WAND = registerItems("magic_wand", new MagicWandItem(new Item.Settings().maxDamage(128)));
     public static final Item MAGIC_WAND_MONO = registerItems("magic_wand_mono", new MagicWandItem(new Item.Settings().maxDamage(128)));
@@ -60,6 +47,17 @@ public class ModItems {
             new HammerItem(ModToolMaterials.AMETHYST, new Item.Settings().attributeModifiers(
                     PickaxeItem.createAttributeModifiers(ModToolMaterials.AMETHYST, 5, -3.6f))));
 
+    public static final Item VOID_SWORD = registerItems("void_sword",
+            new SwordItem(ModToolMaterials.VOID, new Item.Settings().attributeModifiers(
+                    SwordItem.createAttributeModifiers(ModToolMaterials.VOID, 6, -2.8f))));
+
+    public static final Item VOID_HAMMER = registerItems("void_hammer",
+            new VoidHammerItem(ModToolMaterials.VOID, new Item.Settings().attributeModifiers(
+                    PickaxeItem.createAttributeModifiers(ModToolMaterials.VOID, 5, -3.6f))));
+
+    public static final Item AMETHYST_BOW = registerItems("amethyst_bow",
+            new BowItem(new Item.Settings().maxDamage(600)));
+
 
     public static final Item AMETHYST_HELMET = registerItems("amethyst_helmet",
             new ModArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(
@@ -77,9 +75,20 @@ public class ModItems {
             new ModArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(
                     ArmorItem.Type.BOOTS.getMaxDamage(15))));
 
+    public static final Item BOYKISSER_BOOTS = registerItems("boykisser_boots",
+            new ModArmorItem(ModArmorMaterials.BOYKISSER_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(
+                    ArmorItem.Type.BOOTS.getMaxDamage(5))));
+
     public static final Item AMETHYST_HORSE_ARMOR = registerItems("amethyst_horse_armor",
             new AnimalArmorItem(ModArmorMaterials.AMETHYST_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, false,
                     new Item.Settings().maxCount(1)));
+
+    public static final Item EYEBALL_SMITHING_TEMPLATE = registerItems("eyeball_armor_trim_smithing_template",
+            SmithingTemplateItem.of(Identifier.of(TutorialBox.MOD_ID, "eyeball"), FeatureFlags.VANILLA));
+
+
+    public static final Item DREAMING_STARS_MUSIC_DISC = registerItems("dreaming_stars_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.DREAMING_STARS_KEY).maxCount(1).rarity(Rarity.RARE)));
 
     private static Item registerItems(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TutorialBox.MOD_ID, name), item);

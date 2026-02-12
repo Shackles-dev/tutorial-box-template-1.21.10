@@ -17,7 +17,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-    getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
             .add(ModBlocks.LEMON_PLANKS)
             .add(ModBlocks.LEMON_STAIRS)
             .add(ModBlocks.LEMON_SLAB)
@@ -28,13 +28,43 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(ModBlocks.LEMON_FENCE)
             .add(ModBlocks.LEMON_FENCE_GATE);
 
-    getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.LEMON_FENCE);
-    getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.LEMON_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+            .add(ModBlocks.URANIUM_ORE)
+            .add(ModBlocks.DEEPSLATE_URANIUM_ORE);
 
-    getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.URANIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_URANIUM_ORE);
 
-    getOrCreateTagBuilder(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
-            .add(Blocks.BUDDING_AMETHYST)
-            .addTag(BlockTags.NEEDS_IRON_TOOL);
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
+                .add(Blocks.BUDDING_AMETHYST)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_VOID_TOOL)
+                .add(Blocks.BEDROCK)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+            .add(ModBlocks.LEMON_PLANKS);
+        getOrCreateTagBuilder(BlockTags.STAIRS)
+            .add(ModBlocks.LEMON_STAIRS);
+        getOrCreateTagBuilder(BlockTags.SLABS)
+            .add(ModBlocks.LEMON_SLAB);
+        getOrCreateTagBuilder(BlockTags.BUTTONS)
+            .add(ModBlocks.LEMON_BUTTON);
+        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
+            .add(ModBlocks.LEMON_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.DOORS)
+            .add(ModBlocks.LEMON_DOOR);
+        getOrCreateTagBuilder(BlockTags.TRAPDOORS)
+            .add(ModBlocks.LEMON_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.LEMON_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.LEMON_FENCE_GATE);
+
+
     }
 }

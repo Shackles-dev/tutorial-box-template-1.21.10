@@ -18,6 +18,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.shackles_dev.tutorialbox.item.ModItems;
+import net.shackles_dev.tutorialbox.sound.ModSounds;
 import net.shackles_dev.tutorialbox.util.ModTags;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class MagicBlock extends Block{
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        world.playSound(player, pos, SoundEvents.BLOCK_END_PORTAL_SPAWN, SoundCategory.BLOCKS, 10f, 1f);
+        world.playSound(player, pos, ModSounds.MAGIC_BLOCK_USE, SoundCategory.BLOCKS, 10f, 1f);
         if(!world.isClient) {
             world.setBlockState(pos, state.cycle(CLICKED));
         }
