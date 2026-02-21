@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.entity.BeaconBlockEntity;
@@ -68,5 +69,10 @@ public class TutorialBox implements ModInitializer {
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.MUNDANE, Items.TOTEM_OF_UNDYING, ModPotions.TOTEM_POTION);
 		});
+
+		CompostingChanceRegistry.INSTANCE.add(ModItems.LEMON, 0.5f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.CHOPPED_LEMON, 0.25f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.WEED, 0.5f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.WEED_SEEDS, 0.25f);
 	}
 }

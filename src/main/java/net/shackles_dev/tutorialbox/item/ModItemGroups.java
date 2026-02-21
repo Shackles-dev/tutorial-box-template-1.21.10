@@ -21,6 +21,7 @@ public class ModItemGroups {
                                 entries.add(ModItems.LEMON);
                                 entries.add(ModItems.CHOPPED_LEMON);
                                 entries.add(ModItems.JACK_DANIELS);
+                                entries.add(ModItems.WEED);
                             }).build());
     public static final ItemGroup MODDED_NATURAL_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TutorialBox.MOD_ID, "modded_natural_blocks"),
@@ -36,6 +37,8 @@ public class ModItemGroups {
 
                                 entries.add(ModBlocks.CARVED_MELON);
                                 entries.add(ModBlocks.JACK_O_MELON);
+
+                                entries.add(ModItems.WEED_SEEDS);
                             }).build());
     public static final ItemGroup MODDED_BUILDING_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TutorialBox.MOD_ID, "modded_building_blocks"),

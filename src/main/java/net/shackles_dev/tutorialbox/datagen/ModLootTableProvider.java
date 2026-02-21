@@ -9,14 +9,17 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.shackles_dev.tutorialbox.block.ModBlocks;
+import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
 import net.shackles_dev.tutorialbox.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -46,6 +49,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.URANIUM_ORE, oreDrops(ModBlocks.URANIUM_ORE, ModItems.URANIUM));
         addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.URANIUM, 3, 5));
         addDrop(Blocks.BUDDING_AMETHYST);
+
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.WEED_CROP).properties(
+                StatePredicate.Builder.create().exactMatch(WeedCropBlock.AGE, WeedCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.WEED_CROP, this.cropDrops(ModBlocks.WEED_CROP, ModItems.WEED, ModItems.WEED_SEEDS, builder2));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

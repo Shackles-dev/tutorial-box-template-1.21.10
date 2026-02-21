@@ -16,4 +16,14 @@ public class ModFoodComponents {
                     StatusEffects.RESISTANCE, 1200, 20), 100).statusEffect(
                             new StatusEffectInstance(
                     StatusEffects.NAUSEA, 1200, 5), 100).build();
+
+    public static final FoodComponent WEED = new FoodComponent.Builder().nutrition(
+            0).saturationModifier(10f).statusEffect(new StatusEffectInstance(
+                    StatusEffects.GLOWING, 1200, 5), 100).statusEffect(
+                            new StatusEffectInstance(
+                    StatusEffects.SLOWNESS, 1200, 2), 100).statusEffect(
+                            new StatusEffectInstance(
+                    StatusEffects.WEAKNESS, 1200, 2), 100).statusEffect(
+                            new StatusEffectInstance(
+                    StatusEffects.NAUSEA, 1200, 5), 100).alwaysEdible().build();
 }

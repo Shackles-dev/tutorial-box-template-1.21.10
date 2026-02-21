@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "tutorialbox:block/weed_crop_stage0"
+    },
+    "age=1": {
+      "model": "tutorialbox:block/weed_crop_stage1"
+    },
+    "age=2": {
+      "model": "tutorialbox:block/weed_crop_stage2"
+    },
+    "age=3": {
+      "model": "tutorialbox:block/weed_crop_stage3"
+    }
+  }
+}

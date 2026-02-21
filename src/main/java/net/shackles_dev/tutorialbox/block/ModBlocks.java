@@ -10,6 +10,7 @@ import net.shackles_dev.tutorialbox.TutorialBox;
 import net.shackles_dev.tutorialbox.block.custom.MagicBlock;
 import net.shackles_dev.tutorialbox.block.custom.UraniumBlock;
 import net.shackles_dev.tutorialbox.block.custom.UraniumGlassBlock;
+import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
 import net.shackles_dev.tutorialbox.sound.ModSounds;
 
 import static net.minecraft.block.Blocks.createLogBlock;
@@ -84,6 +85,13 @@ public class ModBlocks {
 //            new SaplingBlock(SaplingGenerator.OAK, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING))
 //    );
 
+    public static final Block WEED_CROP = registerBlockOnly("weed_crop",
+            new WeedCropBlock(AbstractBlock.Settings.copy(Blocks.WHEAT))
+    );
+
+    private static Block registerBlockOnly(String name, Block block){
+        return Registry.register(Registries.BLOCK, Identifier.of(TutorialBox.MOD_ID, name), block);
+    }
     private static Block registerBlock(String name, Block block){
         registerBlockItems(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialBox.MOD_ID, name), block);

@@ -7,6 +7,8 @@ import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.shackles_dev.tutorialbox.TutorialBox;
+import net.shackles_dev.tutorialbox.block.ModBlocks;
+import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
 import net.shackles_dev.tutorialbox.item.custom.*;
 import net.shackles_dev.tutorialbox.sound.ModSounds;
 
@@ -14,6 +16,10 @@ public class ModItems {
     public static final Item LEMON = registerItems("lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON).recipeRemainder(
             ModItems.CHOPPED_LEMON)));
     public static final Item CHOPPED_LEMON = registerItems("chopped_lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON)));
+
+    public static final Item WEED = registerItems("weed", new Item(new Item.Settings().food(ModFoodComponents.WEED)));
+    public static final Item WEED_SEEDS = registerItems("weed_seeds", new AliasedBlockItem(
+            ModBlocks.WEED_CROP, new Item.Settings()));
 
     public static final Item URANIUM = registerItems("uranium", new Item(new Item.Settings().recipeRemainder(ModItems.URANIUM_WASTE).maxCount(1)));
     public static final Item URANIUM_WASTE = registerItems("uranium_waste", new Item(new Item.Settings()));

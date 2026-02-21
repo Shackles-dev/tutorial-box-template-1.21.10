@@ -8,6 +8,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.shackles_dev.tutorialbox.block.ModBlocks;
 import net.shackles_dev.tutorialbox.block.custom.MagicBlock;
+import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
 import net.shackles_dev.tutorialbox.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -37,6 +38,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.CARVED_MELON, textureMap);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.JACK_O_MELON, textureMap);
 
+        blockStateModelGenerator.registerCrop(ModBlocks.WEED_CROP, WeedCropBlock.AGE, 0, 1, 2, 3);
+
         Identifier magicBlockColoredIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.MAGIC_BLOCK, blockStateModelGenerator.modelCollector);
         Identifier magicBlockMonoIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.MAGIC_BLOCK, "_mono", Models.CUBE_ALL, TextureMap::all);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.MAGIC_BLOCK).coordinate(
@@ -48,6 +51,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.LEMON, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHOPPED_LEMON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WEED, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.URANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.URANIUM_WASTE, Models.GENERATED);
