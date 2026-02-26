@@ -1,6 +1,8 @@
 package net.shackles_dev.tutorialbox.util;
 
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.shackles_dev.tutorialbox.TutorialBox;
@@ -11,10 +13,12 @@ import java.util.Stack;
 
 public class ModModelPredicates {
     public static void registerModelPredicates() {
-        ModelPredicateProviderRegistry.register(ModItems.MAGIC_WAND, Identifier.of(TutorialBox.MOD_ID, "used"),
-                (stack, world, entity, seed) -> stack.get(ModDataComponentTypes.COORDINATES) != null ? 1f : 0f);
-        ModelPredicateProviderRegistry.register(ModItems.VOID_SWORD, Identifier.of(TutorialBox.MOD_ID, "activated"),
-                (stack, world, entity, seed) -> stack.getDamage() > 0 ? 1f : 0f);
+
+        ModelPredicateProviderRegistry.register(ModItems.MAGIC_WAND, Identifier.of(TutorialBox.MOD_ID, "used"), (
+                stack, world, entity, seed) -> stack.get(ModDataComponentTypes.COORDINATES) != null ? 1f : 0f);
+        ModelPredicateProviderRegistry.register(ModItems.VOID_SWORD, Identifier.of(TutorialBox.MOD_ID, "activated"), (
+               stack, world, entity, seed) -> stack.getHolder() == null ? entity.hasStatusEffect(
+                       StatusEffects.DARKNESS)  || entity.hasStatusEffect(StatusEffects.BLINDNESS) ? 1f : 0f : 0f);
 
         registerCustomBow(ModItems.AMETHYST_BOW);
     }

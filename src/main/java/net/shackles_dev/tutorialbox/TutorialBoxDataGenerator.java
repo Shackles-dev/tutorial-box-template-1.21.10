@@ -9,6 +9,8 @@ import net.shackles_dev.tutorialbox.enchantment.ModEnchantmentEffects;
 import net.shackles_dev.tutorialbox.enchantment.ModEnchantments;
 import net.shackles_dev.tutorialbox.trim.ModTrimMaterials;
 import net.shackles_dev.tutorialbox.trim.ModTrimPatterns;
+import net.shackles_dev.tutorialbox.world.ModConfiguredFeatures;
+import net.shackles_dev.tutorialbox.world.ModPlacedFeatures;
 
 public class TutorialBoxDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -28,5 +30,7 @@ public class TutorialBoxDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }

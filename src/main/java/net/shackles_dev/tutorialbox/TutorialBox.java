@@ -28,6 +28,7 @@ import net.shackles_dev.tutorialbox.potion.ModPotions;
 import net.shackles_dev.tutorialbox.sound.ModSounds;
 import net.shackles_dev.tutorialbox.util.HammerUsageEvent;
 import net.shackles_dev.tutorialbox.util.VoidHammerUsageEvent;
+import net.shackles_dev.tutorialbox.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,6 +41,7 @@ public class TutorialBox implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModdedItems();
 		ModBlocks.registerModBlocks();
+		ModWorldGeneration.generateModWorldGen();
 		ModDataComponentTypes.registerComponentDataTypes();
 		ModSounds.registerModdedSounds();
 		ModEffects.registerModdedEffects();
