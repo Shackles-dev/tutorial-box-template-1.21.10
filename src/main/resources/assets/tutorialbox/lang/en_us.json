@@ -2,6 +2,8 @@
   "item.tutorialbox.lemon": "Lemon",
   "item.tutorialbox.chopped_lemon": "Chopped Lemon",
   "item.tutorialbox.uranium": "Uranium",
+  "item.tutorialbox.uranium_waste": "Uranium Waste",
+  "item.tutorialbox.cloud_berries": "Cloud Berries",
 
   "item.tutorialbox.magic_wand": "Magic Wand",
   "item.tutorialbox.magic_wand_mono": "Magic Wand",
@@ -9,7 +11,8 @@
   "item.tutorialbox.weed": "Weed",
 
   "item.tutorialbox.weed_seeds": "Weed Seeds",
-  "item.tutorialbox.weed_crop": "marijuana crop",
+  "block.tutorialbox.weed_crop": "marijuana crop",
+  "block.tutorialbox.cloud_berry_bush": "cloud berry bush",
 
   "item.tutorialbox.amethyst_sword": "Amethyst Sword",
   "item.tutorialbox.amethyst_pickaxe": "Amethyst Pickaxe",

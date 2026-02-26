@@ -8,7 +8,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.shackles_dev.tutorialbox.TutorialBox;
 import net.shackles_dev.tutorialbox.block.ModBlocks;
-import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
 import net.shackles_dev.tutorialbox.item.custom.*;
 import net.shackles_dev.tutorialbox.sound.ModSounds;
 
@@ -16,6 +15,9 @@ public class ModItems {
     public static final Item LEMON = registerItems("lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON).recipeRemainder(
             ModItems.CHOPPED_LEMON)));
     public static final Item CHOPPED_LEMON = registerItems("chopped_lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON)));
+
+    public static final Item CLOUD_BERRIES = registerItems("cloud_berries", new AliasedBlockItem(
+            ModBlocks.CLOUD_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.CLOUD_BERRIES)));
 
     public static final Item WEED = registerItems("weed", new Item(new Item.Settings().food(ModFoodComponents.WEED)));
     public static final Item WEED_SEEDS = registerItems("weed_seeds", new AliasedBlockItem(

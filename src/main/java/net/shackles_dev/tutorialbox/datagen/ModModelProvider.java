@@ -7,6 +7,7 @@ import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.shackles_dev.tutorialbox.block.ModBlocks;
+import net.shackles_dev.tutorialbox.block.custom.CloudBerryBushBlock;
 import net.shackles_dev.tutorialbox.block.custom.MagicBlock;
 import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
 import net.shackles_dev.tutorialbox.item.ModItems;
@@ -39,6 +40,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.JACK_O_MELON, textureMap);
 
         blockStateModelGenerator.registerCrop(ModBlocks.WEED_CROP, WeedCropBlock.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(
+                ModBlocks.CLOUD_BERRY_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED, CloudBerryBushBlock.AGE, 0, 1, 2, 3);
 
         Identifier magicBlockColoredIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.MAGIC_BLOCK, blockStateModelGenerator.modelCollector);
         Identifier magicBlockMonoIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.MAGIC_BLOCK, "_mono", Models.CUBE_ALL, TextureMap::all);

@@ -1,6 +1,6 @@
-// 1.21.1	2026-02-13T03:43:13.5798165	Tutorial Box/Block Loot Tables
-22af1bff0db88218b4074ccbb5ca214d61cd112c data\tutorialbox\loot_table\blocks\lemon_fence_gate.json
+// 1.21.1	2026-02-22T09:34:25.8966885	Tutorial Box/Block Loot Tables
 c143cc5ace3628901b7c77c27af312d81d3be2c4 data\tutorialbox\loot_table\blocks\lemon_slab.json
+22af1bff0db88218b4074ccbb5ca214d61cd112c data\tutorialbox\loot_table\blocks\lemon_fence_gate.json
 44f8464566bf883454051cb84a3c4fb5e705d758 data\tutorialbox\loot_table\blocks\lemon_stairs.json
 6e4fc421d29c422e724101d7a8221a6285f780fb data\tutorialbox\loot_table\blocks\lemon_leaves.json
 f84eeb8afa5b3dbfab10f48096361ca767b69414 data\tutorialbox\loot_table\blocks\lemon_trapdoor.json
@@ -8,6 +8,7 @@ f84eeb8afa5b3dbfab10f48096361ca767b69414 data\tutorialbox\loot_table\blocks\lemo
 83cf3e8ea7deab55e6b0d565dfc772a51fbc12aa data\tutorialbox\loot_table\blocks\lemon_planks.json
 6f14c251cc2e0cd79df71c8038691a953b6cc4c6 data\tutorialbox\loot_table\blocks\lemon_door.json
 520fdf260f9cbe1ea684d8ff41ba78c4c1d0e1e8 data\tutorialbox\loot_table\blocks\lemon_button.json
+393ade6430044a94214b79ed15abe06c50d63626 data\tutorialbox\loot_table\blocks\cloud_berry_bush.json
 04200f01ff80c5e9e2506e0c8405ae22cfecfef1 data\tutorialbox\loot_table\blocks\carved_melon.json
 1ddb68c371fa4da2d01024042aa3bf32f8cf6ab4 data\tutorialbox\loot_table\blocks\jack_o_melon.json
 9fa251c1d026e5c3a55df4181f90e279509758c2 data\tutorialbox\loot_table\blocks\lemon_pressure_plate.json

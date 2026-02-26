@@ -9,6 +9,9 @@ public class ModFoodComponents {
             2).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(
                     StatusEffects.GLOWING, 90, 5), 100).build();
 
+    public static final FoodComponent CLOUD_BERRIES = new FoodComponent.Builder().nutrition(
+            3).saturationModifier(0.3F).alwaysEdible().snack().build();
+
     public static final FoodComponent JACKDANIELS = new FoodComponent.Builder().nutrition(
             0).saturationModifier(10f).statusEffect(new StatusEffectInstance(
                     StatusEffects.GLOWING, 1200, 5), 100).statusEffect(

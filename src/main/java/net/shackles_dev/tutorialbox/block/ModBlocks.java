@@ -7,10 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.shackles_dev.tutorialbox.TutorialBox;
-import net.shackles_dev.tutorialbox.block.custom.MagicBlock;
-import net.shackles_dev.tutorialbox.block.custom.UraniumBlock;
-import net.shackles_dev.tutorialbox.block.custom.UraniumGlassBlock;
-import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
+import net.shackles_dev.tutorialbox.block.custom.*;
 import net.shackles_dev.tutorialbox.sound.ModSounds;
 
 import static net.minecraft.block.Blocks.createLogBlock;
@@ -88,10 +85,14 @@ public class ModBlocks {
     public static final Block WEED_CROP = registerBlockOnly("weed_crop",
             new WeedCropBlock(AbstractBlock.Settings.copy(Blocks.WHEAT))
     );
+    public static final Block CLOUD_BERRY_BUSH = registerBlockOnly("cloud_berry_bush",
+            new CloudBerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH))
+    );
 
     private static Block registerBlockOnly(String name, Block block){
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialBox.MOD_ID, name), block);
     }
+
     private static Block registerBlock(String name, Block block){
         registerBlockItems(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialBox.MOD_ID, name), block);

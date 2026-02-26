@@ -4,10 +4,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -19,6 +21,7 @@ import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.shackles_dev.tutorialbox.block.ModBlocks;
+import net.shackles_dev.tutorialbox.block.custom.CloudBerryBushBlock;
 import net.shackles_dev.tutorialbox.block.custom.WeedCropBlock;
 import net.shackles_dev.tutorialbox.item.ModItems;
 
@@ -31,6 +34,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+
         addDrop(ModBlocks.LEMON_PLANKS);
         addDrop(ModBlocks.LEMON_STAIRS);
         addDrop(ModBlocks.LEMON_SLAB, slabDrops(ModBlocks.LEMON_SLAB));
@@ -53,6 +58,19 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.WEED_CROP).properties(
                 StatePredicate.Builder.create().exactMatch(WeedCropBlock.AGE, WeedCropBlock.MAX_AGE));
         this.addDrop(ModBlocks.WEED_CROP, this.cropDrops(ModBlocks.WEED_CROP, ModItems.WEED, ModItems.WEED_SEEDS, builder2));
+
+        this.addDrop(ModBlocks.CLOUD_BERRY_BUSH, block -> this.applyExplosionDecay(block, LootTable.builder().pool(
+                                        LootPool.builder().conditionally(
+                                                        BlockStatePropertyLootCondition.builder(ModBlocks.CLOUD_BERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(CloudBerryBushBlock.AGE, 3))
+                                                ).with(ItemEntry.builder(ModItems.CLOUD_BERRIES)).apply(
+                                                        SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F))).apply(
+                                                                ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                                ).pool(LootPool.builder().conditionally(
+                                                        BlockStatePropertyLootCondition.builder(ModBlocks.CLOUD_BERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(CloudBerryBushBlock.AGE, 2))
+                                                ).with(ItemEntry.builder(ModItems.CLOUD_BERRIES)).apply(
+                                                        SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F))).apply(
+                                                        ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))))
+        );
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

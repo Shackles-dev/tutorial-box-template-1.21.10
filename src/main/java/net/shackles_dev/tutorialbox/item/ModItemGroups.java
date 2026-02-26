@@ -22,6 +22,7 @@ public class ModItemGroups {
                                 entries.add(ModItems.CHOPPED_LEMON);
                                 entries.add(ModItems.JACK_DANIELS);
                                 entries.add(ModItems.WEED);
+                                entries.add(ModItems.CLOUD_BERRIES);
                             }).build());
     public static final ItemGroup MODDED_NATURAL_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TutorialBox.MOD_ID, "modded_natural_blocks"),
