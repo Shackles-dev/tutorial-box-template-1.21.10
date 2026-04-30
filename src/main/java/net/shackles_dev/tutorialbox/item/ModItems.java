@@ -14,7 +14,8 @@ import net.shackles_dev.tutorialbox.sound.ModSounds;
 public class ModItems {
     public static final Item LEMON = registerItems("lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON).recipeRemainder(
             ModItems.CHOPPED_LEMON)));
-    public static final Item CHOPPED_LEMON = registerItems("chopped_lemon", new LemonItem(new Item.Settings().food(ModFoodComponents.LEMON)));
+    public static final Item CHOPPED_LEMON = registerItems("chopped_lemon", new LemonSaplingItem(
+            ModBlocks.LEMON_SAPLING, new Item.Settings().food(ModFoodComponents.LEMON)));
 
     public static final Item CLOUD_BERRIES = registerItems("cloud_berries", new AliasedBlockItem(
             ModBlocks.CLOUD_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.CLOUD_BERRIES)));

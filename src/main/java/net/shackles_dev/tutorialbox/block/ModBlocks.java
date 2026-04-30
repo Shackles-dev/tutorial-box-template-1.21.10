@@ -1,39 +1,59 @@
 package net.shackles_dev.tutorialbox.block;
 
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.shackles_dev.tutorialbox.TutorialBox;
 import net.shackles_dev.tutorialbox.block.custom.*;
 import net.shackles_dev.tutorialbox.sound.ModSounds;
+import net.shackles_dev.tutorialbox.world.tree.ModSaplingGenerators;
 
 import static net.minecraft.block.Blocks.createLogBlock;
 
 public class ModBlocks {
-//    public static final Block LEMON_LOG = registerBlock("lemon_log",
-//            createLogBlock(MapColor.PALE_YELLOW, MapColor.YELLOW)
-//    );
-    public static final Block LEMON_LEAVES = registerBlock("lemon_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES))
+    public static final Block LEMON_LOG = registerBlock("lemon_log",
+            new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.BIRCH_LOG))
     );
-    public static final Block LEMON_PLANKS = registerBlock("lemon_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.YELLOW))
+    public static final Block LEMON_LEAVES = registerBlock("lemon_leaves", new LeavesBlock(
+                    AbstractBlock.Settings.copy(Blocks.OAK_LEAVES))
+    );
+    public static final Block LEMON_WOOD = registerBlock("lemon_wood", new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.BIRCH_WOOD))
+    );
+    public static final Block STRIPPED_LEMON_LOG = registerBlock("stripped_lemon_log", new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.STRIPPED_BIRCH_LOG))
+    );
+    public static final Block STRIPPED_LEMON_WOOD = registerBlock("stripped_lemon_wood", new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.STRIPPED_BIRCH_WOOD))
     );
 
+    public static final Block LEMON_PLANKS = registerBlock("lemon_planks", new Block(
+                    AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS))
+    );
+    public static final Block LEMON_SAPLING = registerBlockOnly("lemon_sapling", new SaplingBlock(
+                    ModSaplingGenerators.LEMON_TREE, AbstractBlock.Settings.copy(Blocks.BIRCH_SAPLING))
+    );
+
+    
     public static final Block URANIUM_ORE = registerBlock("uranium_ore",
-            new UraniumBlock(AbstractBlock.Settings.copy(Blocks.EMERALD_ORE))
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), AbstractBlock.Settings.copy(
+                    Blocks.EMERALD_ORE).luminance(state -> 7))
     );
     public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
-            new UraniumBlock(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_EMERALD_ORE))
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), AbstractBlock.Settings.copy(
+                    Blocks.DEEPSLATE_EMERALD_ORE).luminance(state -> 9))
     );
     public static final Block URANIUM_GLASS = registerBlock("uranium_glass",
-            new UraniumGlassBlock(AbstractBlock.Settings.copy(Blocks.GREEN_STAINED_GLASS))
+            new TransparentBlock(AbstractBlock.Settings.copy(Blocks.GREEN_STAINED_GLASS).luminance(state -> 11))
     );
     public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
-            new UraniumBlock(AbstractBlock.Settings.copy(Blocks.EMERALD_BLOCK))
+            new Block(AbstractBlock.Settings.copy(Blocks.EMERALD_BLOCK).luminance(state -> 13))
     );
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",

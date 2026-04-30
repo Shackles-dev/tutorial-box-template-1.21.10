@@ -30,7 +30,6 @@ public class LemonItem extends Item {
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
 
-        if(stack.getItem().equals(ModItems.LEMON)) {
             if(stack.isEmpty()) {
                 return new ItemStack(ModItems.CHOPPED_LEMON);
             } else {
@@ -43,9 +42,6 @@ public class LemonItem extends Item {
 
                 return stack;
             }
-        } else {
-            return stack;
-        }
     }
 
     public LemonItem(Settings settings) {

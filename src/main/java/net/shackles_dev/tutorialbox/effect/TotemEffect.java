@@ -17,15 +17,16 @@ public class TotemEffect extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
-            if (entity.getHealth() == 0) {
+        if (entity.getHealth() == 0) {
+            if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
                 serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(Items.TOTEM_OF_UNDYING));
-
-                entity.getWorld().sendEntityStatus(entity, EntityStatuses.USE_TOTEM_OF_UNDYING);
                 ((ServerPlayerEntity) entity).requestRespawn();
-                entity.setHealth(1);
-                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 160, 1));
             }
+
+            entity.getWorld().sendEntityStatus(entity, EntityStatuses.USE_TOTEM_OF_UNDYING);
+            entity.setHealth(1);
+            entity.setBodyYaw(0);
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 160, 1));
         }
         return super.applyUpdateEffect(entity, amplifier);
     }

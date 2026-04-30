@@ -29,8 +29,9 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.LEMON_LEAVES)).displayName(
                     Text.translatable("itemGroup.tutorialbox.modded_natural_blocks")).entries(
                             (displayContext, entries) -> {
-                                //entries.add(ModBlocks.LEMON_LOG);
+                                entries.add(ModBlocks.LEMON_LOG);
                                 entries.add(ModBlocks.LEMON_LEAVES);
+                                entries.add(ModBlocks.LEMON_SAPLING);
 
                                 entries.add(ModBlocks.URANIUM_ORE);
                                 entries.add(ModBlocks.DEEPSLATE_URANIUM_ORE);
@@ -46,7 +47,11 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.LEMON_PLANKS)).displayName(
                     Text.translatable("itemGroup.tutorialbox.modded_building_blocks")).entries(
                             (displayContext, entries) -> {
+                                entries.add(ModBlocks.LEMON_LOG);
                                 entries.add(ModBlocks.LEMON_PLANKS);
+                                entries.add(ModBlocks.LEMON_WOOD);
+                                entries.add(ModBlocks.STRIPPED_LEMON_LOG);
+                                entries.add(ModBlocks.STRIPPED_LEMON_WOOD);
                                 entries.add(ModBlocks.LEMON_STAIRS);
                                 entries.add(ModBlocks.LEMON_SLAB);
                                 entries.add(ModBlocks.LEMON_FENCE);

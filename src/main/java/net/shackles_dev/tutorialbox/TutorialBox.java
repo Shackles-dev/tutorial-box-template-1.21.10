@@ -4,9 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
-import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.block.entity.BeaconBlockEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -76,5 +74,15 @@ public class TutorialBox implements ModInitializer {
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CHOPPED_LEMON, 0.25f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.WEED, 0.5f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.WEED_SEEDS, 0.25f);
+
+		StrippableBlockRegistry.register(ModBlocks.LEMON_LOG, ModBlocks.STRIPPED_LEMON_LOG);
+		StrippableBlockRegistry.register(ModBlocks.LEMON_WOOD, ModBlocks.STRIPPED_LEMON_WOOD);
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LEMON_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LEMON_LEAVES, 30, 60);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LEMON_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.LEMON_WOOD, 5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_LEMON_LOG,5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_LEMON_WOOD, 5, 5);
 	}
 }

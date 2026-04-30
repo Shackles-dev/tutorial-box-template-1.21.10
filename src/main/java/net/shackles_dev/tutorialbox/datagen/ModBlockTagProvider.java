@@ -65,6 +65,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.LEMON_FENCE_GATE);
 
-
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.LEMON_LOG)
+                .add(ModBlocks.LEMON_WOOD)
+                .add(ModBlocks.STRIPPED_LEMON_LOG)
+                .add(ModBlocks.STRIPPED_LEMON_WOOD);
     }
 }

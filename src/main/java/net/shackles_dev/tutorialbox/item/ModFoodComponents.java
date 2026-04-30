@@ -3,11 +3,12 @@ package net.shackles_dev.tutorialbox.item;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.shackles_dev.tutorialbox.effect.ModEffects;
 
 public class ModFoodComponents {
     public static final FoodComponent LEMON = new FoodComponent.Builder().nutrition(
             2).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(
-                    StatusEffects.GLOWING, 90, 5), 100).build();
+                    ModEffects.SOUR, 160, 0), 100).build();
 
     public static final FoodComponent CLOUD_BERRIES = new FoodComponent.Builder().nutrition(
             3).saturationModifier(0.3F).alwaysEdible().snack().build();

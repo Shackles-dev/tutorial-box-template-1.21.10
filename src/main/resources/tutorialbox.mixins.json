@@ -3,7 +3,8 @@
   "package": "net.shackles_dev.tutorialbox.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ExampleMixin"
+    "ExampleMixin",
+    "SourLemonMixin"
   ],
   "injectors": {
     "defaultRequire": 1

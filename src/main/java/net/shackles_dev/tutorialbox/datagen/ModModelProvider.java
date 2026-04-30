@@ -27,8 +27,10 @@ public class ModModelProvider extends FabricModelProvider {
         LemonWoodPool.fenceGate(ModBlocks.LEMON_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.LEMON_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.LEMON_TRAPDOOR);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEMON_LEAVES);
-        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEMON_LOG);
+        blockStateModelGenerator.registerSingleton(ModBlocks.LEMON_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.LEMON_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.LEMON_LOG).log(ModBlocks.LEMON_LOG).wood(ModBlocks.LEMON_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_LEMON_LOG).log(ModBlocks.STRIPPED_LEMON_LOG).wood(ModBlocks.STRIPPED_LEMON_WOOD);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.URANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_URANIUM_ORE);

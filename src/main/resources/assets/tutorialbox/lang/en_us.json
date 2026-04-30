@@ -35,8 +35,13 @@
 
   "item.tutorialbox.eyeball_armor_trim_smithing_template": "Eyeball Smithing Template",
 
+  "block.tutorialbox.lemon_log": "Lemon Log",
   "block.tutorialbox.lemon_leaves": "Lemon Leaves",
   "block.tutorialbox.lemon_planks": "Lemon Planks",
+  "block.tutorialbox.lemon_wood": "Lemon Wood",
+  "block.tutorialbox.stripped_lemon_log": "Stripped Lemon Log",
+  "block.tutorialbox.stripped_lemon_wood": "Stripped Lemon Wood",
+  "block.tutorialbox.lemon_sapling": "Lemon Sapling",
 
   "block.tutorialbox.uranium_ore": "Uranium Ore",
   "block.tutorialbox.deepslate_uranium_ore": "Deepslate Uranium Ore",

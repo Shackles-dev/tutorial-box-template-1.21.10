@@ -107,6 +107,8 @@ public class ModRecipeProvider extends FabricRecipeProvider{
                 .criterion("has uranium", conditionsFromItem(ModItems.URANIUM))
                 .offerTo(recipeExporter);
 
+
+
         offerSmithingTrimRecipe(recipeExporter, ModItems.EYEBALL_SMITHING_TEMPLATE, Identifier.of(TutorialBox.MOD_ID, "eyeball"));
 
         offerSmelting(recipeExporter, URANIUM_ORES, RecipeCategory.MISC, ModItems.URANIUM, 6.0F, 200, "uranium_ores");

@@ -1,6 +1,7 @@
 package net.shackles_dev.tutorialbox.effect;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -13,11 +14,6 @@ public class SourEffect extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if(amplifier > 0) {
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 200, amplifier));
-        }
-        entity.setSprinting(false);
-        entity.endCombat();
 
         return super.applyUpdateEffect(entity, amplifier);
     }

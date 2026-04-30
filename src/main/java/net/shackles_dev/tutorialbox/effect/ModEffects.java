@@ -16,10 +16,16 @@ public class ModEffects {
             "slimey", new SlimeyEffect(StatusEffectCategory.NEUTRAL, 0x36ebab).addAttributeModifier(
                     EntityAttributes.GENERIC_MOVEMENT_SPEED, Identifier.of(
                             TutorialBox.MOD_ID, "slimey"), -0.25f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
     public static final RegistryEntry<StatusEffect> SOUR = registerStatusEffect(
             "sour", new SourEffect(StatusEffectCategory.HARMFUL, 0xedff99).addAttributeModifier(
                     EntityAttributes.GENERIC_MOVEMENT_SPEED, Identifier.of(
-                            TutorialBox.MOD_ID, "sour"), -0.25f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+                            TutorialBox.MOD_ID, "sour"), -0.50f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL).addAttributeModifier(
+                                    EntityAttributes.GENERIC_ATTACK_DAMAGE, Identifier.of(
+                                            TutorialBox.MOD_ID, "sour"), -0.50f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL).addAttributeModifier(
+                                                    EntityAttributes.GENERIC_ATTACK_KNOCKBACK, Identifier.of(
+                                                            TutorialBox.MOD_ID, "sour"), -0.50f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
     public static final RegistryEntry<StatusEffect> TOTEM = registerStatusEffect(
             "totem", new TotemEffect(StatusEffectCategory.BENEFICIAL, 0xf3ff00));
 

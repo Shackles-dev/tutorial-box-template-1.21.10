@@ -1,15 +1,16 @@
-// 1.21.1	2026-02-26T12:45:11.3370839	Tutorial Box/Tags for minecraft:block
-cadce3a7a76c32226dc6abd4f3e50fbcaaaa446b data\minecraft\tags\block\pressure_plates.json
+// 1.21.1	2026-04-30T09:44:57.5927224	Tutorial Box/Tags for minecraft:block
 046414e7e5b178cf29552993924dcfd070201a6d data\minecraft\tags\block\wooden_fences.json
+cadce3a7a76c32226dc6abd4f3e50fbcaaaa446b data\minecraft\tags\block\pressure_plates.json
 15d5cb5b1426c74b1b6d562f755a470ed1998afd data\tutorialbox\tags\block\needs_amethyst_tool.json
-b96aedb72408683f009875ee724477a843095987 data\tutorialbox\tags\block\needs_void_tool.json
 d3a20aaece4794485c974e705f3bbb6bb6147081 data\minecraft\tags\block\slabs.json
+b96aedb72408683f009875ee724477a843095987 data\tutorialbox\tags\block\needs_void_tool.json
 a05717ed8f646550fa2bfd5917f1676123721d2f data\minecraft\tags\block\doors.json
 3ffffb0c94cb98fd59cfdfcaf77fe984fb7a8cde data\minecraft\tags\block\stairs.json
 266cc1e57c3fe71564c160c23e9c1b23a756e970 data\minecraft\tags\block\planks.json
 fdb5d96af40a95a486fdbc3934284c195cc69bcc data\minecraft\tags\block\buttons.json
 14b2567b4daf5a9221c5086347102eebb82b44a7 data\minecraft\tags\block\fence_gates.json
 c7ed121f6f3768f4b364c8ba47bb62e948fed981 data\minecraft\tags\block\needs_iron_tool.json
+75c0e1fcde228b99848b747b2fe674d427d7d5d5 data\minecraft\tags\block\logs_that_burn.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data\minecraft\tags\block\needs_diamond_tool.json
 c7ed121f6f3768f4b364c8ba47bb62e948fed981 data\minecraft\tags\block\mineable\pickaxe.json
 5c0bbbec41c202fa9d104ea2ad6848facd0e5fdb data\minecraft\tags\block\mineable\axe.json

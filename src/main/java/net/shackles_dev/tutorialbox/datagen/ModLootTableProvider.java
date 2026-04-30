@@ -45,14 +45,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LEMON_TRAPDOOR);
         addDrop(ModBlocks.LEMON_FENCE);
         addDrop(ModBlocks.LEMON_FENCE_GATE);
-        addDrop(ModBlocks.LEMON_LEAVES, leavesDrops(ModBlocks.LEMON_LEAVES, Block.getBlockFromItem(ModItems.CHOPPED_LEMON), 0.05F, 0.0625F, 0.083333336F, 0.1F));
-        //addDrop(ModBlocks.LEMON_LOG);
-        //addDrop(ModBlocks.LEMON_SAPLING);
+        addDrop(ModBlocks.LEMON_LEAVES, leavesDrops(ModBlocks.LEMON_LEAVES, ModBlocks.LEMON_SAPLING, 0.05F, 0.0625F, 0.083333336F, 0.1F));
+        addDrop(ModBlocks.LEMON_LOG);
+        addDrop(ModBlocks.LEMON_WOOD);
+        addDrop(ModBlocks.STRIPPED_LEMON_LOG);
+        addDrop(ModBlocks.STRIPPED_LEMON_WOOD);
+        addDrop(ModBlocks.LEMON_SAPLING);
         addDrop(ModBlocks.MAGIC_BLOCK);
         addDrop(ModBlocks.CARVED_MELON);
         addDrop(ModBlocks.JACK_O_MELON);
-        addDrop(ModBlocks.URANIUM_ORE, oreDrops(ModBlocks.URANIUM_ORE, ModItems.URANIUM));
-        addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.URANIUM, 3, 5));
+        addDrop(ModBlocks.URANIUM_ORE, multipleOreDrops(ModBlocks.URANIUM_ORE, ModItems.URANIUM, 2, 5));
+        addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.URANIUM, 4, 6));
         addDrop(Blocks.BUDDING_AMETHYST);
 
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.WEED_CROP).properties(
