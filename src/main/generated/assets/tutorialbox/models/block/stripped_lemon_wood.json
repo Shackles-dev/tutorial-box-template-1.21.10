@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "tutorialbox:block/stripped_lemon_log",
+    "side": "tutorialbox:block/stripped_lemon_log"
+  }
+}

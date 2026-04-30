@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "tutorialbox:block/lemon_log_top",
+    "side": "tutorialbox:block/lemon_log"
+  }
+}
