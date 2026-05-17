@@ -36,8 +36,8 @@ public class ModBlocks {
     public static final Block LEMON_PLANKS = registerBlock("lemon_planks", new Block(
                     AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS))
     );
-    public static final Block LEMON_SAPLING = registerBlockOnly("lemon_sapling", new SaplingBlock(
-                    ModSaplingGenerators.LEMON_TREE, AbstractBlock.Settings.copy(Blocks.BIRCH_SAPLING))
+    public static final Block LEMON_SAPLING = registerBlockOnly("lemon_sapling", new ModSaplingBlock(
+                    ModSaplingGenerators.LEMON_TREE, AbstractBlock.Settings.copy(Blocks.BIRCH_SAPLING), ModBlocks.LEMON_LEAVES)
     );
 
     

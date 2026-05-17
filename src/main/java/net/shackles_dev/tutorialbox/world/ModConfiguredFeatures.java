@@ -42,7 +42,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.LEMON_LEAVES),
                 new BushFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(2), 4),
 
-                new TwoLayersFeatureSize(3, 0, 3)).build());
+                new TwoLayersFeatureSize(3, 0, 3)).dirtProvider(BlockStateProvider.of(ModBlocks.LEMON_LEAVES)).build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

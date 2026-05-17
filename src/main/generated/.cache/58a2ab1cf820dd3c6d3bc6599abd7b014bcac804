@@ -1,7 +1,8 @@
-// 1.21.1	2026-04-30T09:44:57.5834423	Tutorial Box/
+// 1.21.1	2026-05-16T13:18:33.8748949	Tutorial Box/
 791c30771cfff44c666e17272256f3c05979ee99 data\tutorialbox\worldgen\placed_feature\uranium_ore_placed.json
+607eee5157c938e8f7ab51aae7f47d936afee313 data\tutorialbox\worldgen\placed_feature\lemon_tree_placed.json
 d22fd2e3ab3ab9b641fd292a3aecf6e676cb5df8 data\tutorialbox\trim_material\echo_shard.json
-d3c35143d536b1348575dc9294e7c68c447c0ac4 data\tutorialbox\worldgen\configured_feature\lemon_tree.json
+244fbabeb85ddd3f2583a50801a7116d01498bc5 data\tutorialbox\worldgen\configured_feature\lemon_tree.json
 7b56645035f980a1dcf7bc79dbbf3ad2389141da data\tutorialbox\worldgen\configured_feature\uranium_ore.json
 4fbbc8fb9daf0b34ee7ae3bbe29470f642fe7dd2 data\tutorialbox\trim_pattern\eyeball.json
 0c39f199d93efde9c896b418d5d5b75823b4c21c data\tutorialbox\enchantment\repugnant.json

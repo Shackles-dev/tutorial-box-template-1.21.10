@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-30T09:44:57.5957234	Tutorial Box/Model Definitions
+// 1.21.1	2026-05-16T13:18:33.8876996	Tutorial Box/Model Definitions
 c918cd94792b024ad240527eb0e69b3fc6aa0dc0 assets\tutorialbox\blockstates\lemon_trapdoor.json
 56d18c7654e1934c26ff91fb1e3e1eace5c52a7d assets\tutorialbox\models\item\amethyst_leggings_iron_trim.json
 b30ab5975c40e32bf4ef94ea40f02783bafd1da2 assets\tutorialbox\models\block\lemon_fence_inventory.json
@@ -66,8 +66,8 @@ f385f12e38ea180f5590d193880d0fff1032da7f assets\tutorialbox\blockstates\jack_o_m
 149facc1f3ee2c1a13b84f2fab3c2f5235e727f8 assets\tutorialbox\models\item\amethyst_horse_armor.json
 7847b51c221008c06fbf5b5c17b12109ac1633cc assets\tutorialbox\models\block\cloud_berry_bush_stage1.json
 b2629aabcc763f925e09082d77dec7a177e19e50 assets\tutorialbox\models\item\amethyst_helmet.json
-8f738341b675cc9217d9cdaefc781f20e21006ce assets\tutorialbox\models\item\uranium_ore.json
 78a2f35e040ce838e8a741a80f6a52a8b1d965ca assets\tutorialbox\models\item\uranium.json
+8f738341b675cc9217d9cdaefc781f20e21006ce assets\tutorialbox\models\item\uranium_ore.json
 f874754d46e20dabcefee5a63a7f3ea1c9702bc2 assets\tutorialbox\models\block\lemon_door_bottom_left.json
 886e7a5d9698d05b94dfd1ab9ccf685d8ce9d864 assets\tutorialbox\models\block\lemon_stairs_inner.json
 68029a6465dbc7db0d118ed2f4b4b24082a56e71 assets\tutorialbox\models\block\stripped_lemon_wood.json
